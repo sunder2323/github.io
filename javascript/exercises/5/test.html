@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // Function call
+       // displayGreeting();
+
+        // // Function declaration
+        // function displayGreeting() {
+        // console.log("Hello, world!");
+        // }
+
+        // function sayGoodBye() {
+        //     console.log("Good bye");
+        // }
+
+        // sayGoodBye();
+
+        
+
+           // Function expression
+             const greeting = () => console.log("Hello, world! arrow fuction expression");
+
+
+        // Function call
+        greeting();
+
+
+        // Function declaration
+
+        function sumA(a,b)  {
+            //console.log(`Output A: ${a + b}`)
+            return (a + b);
+        }
+        
+        //sumA(3,8);
+
+        //Function expression
+        const sumB= function (a,b)  {
+            //console.log(`Output B: ${a + b}`)
+            return (a + b);
+
+        }
+
+        //sumB(3,6);
+        
+         // Arrow Function expression
+         const sumC= (a,b) =>  {
+            //console.log(`Output C: ${a + b}`)
+            return (a + b);
+
+        }
+
+        //sumC(20,3);
+
+        let answerA= sumA(3,8);
+
+        let answerB= sumB(3,6);
+
+        let answerC= sumC(20,3);
+
+        console.log(`Answer A: ${answerA}`)
+        console.log(`Answer B: ${answerB}`)
+        console.log(`Answer C: ${answerC}`)
+
+    </script>
+</body>
+</html>
