@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Workfile</title>
+</head>
+<body>
+    
+    <script>
+
+
+
+
+
+    const userNames = ["Bridget","Carol","Christine","Deborah"]; 
+    console.log(userNames)
+
+    const fruits = ["Apple", "Pineapple", "Banana", "Grapes","Strawberry"];
+    console.log("Number of items in fruit array: "+fruits.length);
+    console.log("Array element at position 1:"+fruits[1]);
+
+
+    console.log("Last element: "+ fruits[fruits.length-1]);
+
+    for (i = 0; i < fruits.length; i++) {
+    console.log("Array Element "+i+": "+fruits[i]);
+}
+    
+for (i in fruits) {
+    console.log("Looping with for ... in: "+fruits[i]);
+}
+
+
+let fruitShifted = fruits.shift();
+console.log("array without first element: "+fruits)
+console.log("Deleted element: " +fruitShifted)
+
+fruits.unshift("Kiwis");
+console.log("Array with new first element: "+fruits);
+
+fruits.pop();
+console.log("Array with last element deleted: "+fruits);
+
+fruits.push("Blueberry");
+console.log("Array with last element added: "+fruits);
+
+
+const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+
+console.log("Array BEFORE two new values spliced in: "+fruits3);
+
+fruits3.splice(2, 0, "Lemon", "Kiwi");
+
+console.log("Array AFTER two new values spliced in: "+fruits3);
+
+fruits3.splice(2,1);
+
+console.log("Array AFTER \"Lemon\" at index [2] deleted "+fruits3);
+
+const slicedFruits = fruits3.slice(1, 3);
+console.log("Mini-array: "+ slicedFruits);
+console.log("Original array: "+fruits3);
+
+const newString = fruits3.toString(2);
+console.log("String that was an array: "+newString);
+
+
+</script>
+
+</body>
+</html>
