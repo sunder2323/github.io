@@ -1,0 +1,173 @@
+/* ============= FOUR COLUMNS ============ */
+
+/* Desktops/Laptops */
+@media (min-width: 1025px) { 
+    .col-4 { width: 22.5%; margin-bottom: 54px }
+    .col-4:nth-last-child(-n+4) { margin-bottom: 0 }
+}
+
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) { 
+    .col-4 { 
+        width: 46%;
+        margin-bottom: 48px 
+    }
+    .col-4:nth-child(odd) { margin-left: -3% }
+    .col-4:nth-child(even) { margin-right: -3% }
+    .col-4:nth-last-child(-n+2) { margin-bottom: 0 }
+    .col-4 p, 
+    .col-4 li { line-height: 1.4 }
+    .col-4 li { padding-left: 2px }
+}
+
+
+/* Mobiles */
+@media (max-width: 767px) { 
+    /* On mobiles, 4 columns to 1 column */
+    
+    .col-4 {         
+        width: 100%;
+        max-width: 400px; 
+        margin-left: auto; margin-right: auto; 
+        margin-bottom: 48px
+    
+    }
+    .col-4:last-child { margin-bottom: 0 }
+
+    /* On mobiles, 4 columns to 2 columns */
+    .mobile-col-2 .col-4 { 
+        width: 48%;
+        margin-bottom: 20px 
+    }
+
+    .mobile-col-2 .col-4:nth-child(odd) { margin-left: -3% }
+    .mobile-col-2 .col-4:nth-child(even) { margin-right: -3% }
+ 
+    .mobile-col-2 .col-4:nth-last-child(-n+2) { margin-bottom: 0 }
+    .mobile-col-2 .col-4 p, 
+    .mobile-col-2 .col-4 li { line-height: 1.4 }
+    .mobile-col-2 .col-4 li { padding-left: 2px }
+}
+
+/* =================== TYPOGRAPHY  ================== */
+
+.col-4 h3 { 
+    font-size: calc(21px + (22 - 21) * ((100vw - 320px) / (1140 - 320)));
+    font-weight: 700; line-height: 1.15; margin-bottom: 2px;
+}
+
+@media (max-width: 767px) { 
+    .mobile-col-2 .col-4 h3 { font-size: 18px }
+}
+
+.col-4 p {
+    font-size: calc(16px + (17 - 16) * ((100vw - 320px) / (1140 - 320)));
+    line-height: 1.4; margin-bottom: 16px;
+}
+
+.col-4 li { 
+    font-size: calc(16px + (17 - 16) * ((100vw - 320px) / (1140 - 320))); 
+    line-height: 1.4; margin-bottom: 10px; 
+    margin-left: 15px; padding-left: 8px; 
+}
+
+/* All viewports: Paragraphs and lists */
+.col-4  p:last-child,
+.col-4 li:last-child { margin-bottom: 0 }
+
+/* Padding on columns */
+.container-flex.col-padding .col-4 {
+    padding: 14px 16px 18px 16px;
+}
+
+.container-flex.box-shadow .col-4 {
+    border: solid #D3D3D3 1px;
+    box-shadow: 7px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container-flex.border-thin .col-4 {
+    border: solid 1px #888
+}
+
+.container-flex.corner-soft .col-4 {
+    border-radius: 15px
+}
+
+.container-flex.bg-color .col-4 {
+    background-color: var(--gray-200)
+}
+
+/* ================= IMAGES, DRAWINGS, BIG ICONS, VIDS ================= */
+
+@media (min-width: 1200px) {
+    .col-4 figure { margin-bottom: 26px }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .col-4 figure { margin-bottom: 18px }
+}
+
+@media (max-width: 767px) { 
+    .col-4 figure { margin-bottom: 12px }
+}
+
+.container-flex.img-shadow .col-4 img {
+    filter: drop-shadow(4px 4px 10px #888 );
+}
+
+/* Selects an unordered list that directly follows the element with ID title */
+/* #title + ul { margin-top: 0; } */
+ul + a.btn { margin-top: 40px }
+
+
+/* ================= ICONS AS ILLUSTRATIONS  ================= */
+
+.col-4 figure.icon { 
+    display: block; line-height: 1.4;
+    text-align: center;
+    color: var(--gray-600);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Font Awesome */
+.col-4 figure.icon i.fas,
+.col-4 figure.icon i.far {
+    font-size: calc(110px + (120 - 110) * ((100vw - 320px)/(1140 - 320)));
+}
+
+/* Desktop: space under */
+@media (min-width: 768px) {
+    .col-4 figure.icon i.fas,
+    .col-4 figure.icon i.far { margin-top: 20px; margin-bottom: 10px }
+}
+
+/* Mobile: space under */
+@media (max-width: 767px) {
+    .col-4 figure.icon i.fas,
+    .col-4 figure.icon i.far { margin-bottom: 10px; margin-top: 12px }
+}
+
+/* BUTTONS */
+.container-flex .col-4 a.btn { 
+	padding: 14px 24px;
+	font-size: calc(17px + (18 - 17) * ((100vw - 320px)/(1600 - 320)));
+    margin-top: 12px; margin-bottom: 12px !important;
+}
+
+.container-flex a.btn i { margin-right: 16px } 
+
+/* Ghost buttons */
+.container-flex .btn-ghost:any-link {
+    border: solid 2px #222; color: #222; background-color: transparent; 
+} 
+
+.container-flex :is(.btn-ghost:focus, .btn-ghost:hover, .btn-ghost:active)  {
+    border: solid 2px blue; background-color: blue;  color: #fff;
+} 
+
+.container-flex .btn-ghost i { color: #222 }
+.container-flex .btn-ghost:focus i, 
+.container-flex .btn-ghost:hover i, 
+.container-flex .btn-ghost:active i { color: #fff } 
